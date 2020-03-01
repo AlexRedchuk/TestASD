@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#toSquares").click(function () {
+                let block = $(".block");
+                let rows = $(".block__bottom_rows");
+                let descriptions = $(".product_rows");
+                let picture = $(".picture_rows");
+                let price = $(".price_rows");
+                let name = $(".product__name_rows");
+                descriptions.removeClass("product_rows");
+                descriptions.addClass("product_squares");
+                rows.removeClass("block__bottom_rows");
+                rows.addClass("block__bottom_squares");
+                picture.removeClass("picture_rows");
+                picture.addClass("picture_squares");
+                price.removeClass("price_rows");
+                price.addClass("price_squares");
+                name.removeClass("product__name_rows");
+                name.addClass("product__name_squares")
+                $(".description_rows").hide();
+                $(".table_head").hide();
+                block.height(6 * 240);
+                $(".main").height(block.height() + 200);
+            })
+        });
+        $(document).ready(function () {
+            $("#toRows").click(function () {
+                let rows = $(".block__bottom_squares");
+                let descriptions = $(".product_squares");
+                let block = $(".block");
+                let picture = $(".picture_squares");
+                let price = $(".price_squares");
+                let name = $(".product__name_squares");
+                $(".description_rows").show();
+                $(".table_head").show();
+                descriptions.removeClass("product_squares");
+                descriptions.addClass("product_rows");
+                rows.removeClass("block__bottom_squares");
+                rows.addClass("block__bottom_rows");
+                picture.removeClass("picture_squares");
+                picture.addClass("picture_rows");
+                price.removeClass("price_squares");
+                price.addClass("price_rows");
+                name.removeClass("product__name_squares");
+                name.addClass("product__name_rows");
+                block.height(6 * 240);
+                $(".main").height(block.height() + 200);
+            })
+        });
+    </script>
+</head>
+<body>
+<div class="main">
+    <div class="main__head">
+        <div class="market__name">RedRocket Market</div>
+        <div class="circles">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="block__top">
+            <div class="button" id="toRows">Rows</div>
+            <div class="button" id="toSquares">Squares</div>
+        </div>
+        <div class="table_head">
+            <div class="name">Name</div>
+            <div class="photo">Photo</div>
+            <div class="description">Description</div>
+            <div class="price">Price</div>
+            <div class="buy">Buy</div>
+        </div>
+        <div class="block__bottom_rows">
+            <div class="product_rows">
+                <div class="product__name_rows">Very long product name</div>
+                <div class="picture_rows"></div>
+                <div class="description_rows">Lorem ipsum dolor sit amet.</div>
+                <div class="price_buy">
+                <div class="price_rows">3000$</div>
+                <div class="buy_button">Buy</div>
+                </div>
+            </div>
+            <div class="product_rows">
+                <div class="product__name_rows">Very long product name</div>
+                <div class="picture_rows"></div>
+                <div class="description_rows">Lorem ipsum dolor sit amet.</div>
+                <div class="price_buy">
+                <div class="price_rows">3000$</div>
+                <div class="buy_button">Buy</div>
+                </div>
+            </div>
+            <div class="product_rows">
+                <div class="product__name_rows">Very long product name</div>
+                <div class="picture_rows"></div>
+                <div class="description_rows">Lorem ipsum dolor sit amet.</div>
+                <div class="price_buy">
+                <div class="price_rows">3000$</div>
+                <div class="buy_button">Buy</div>
+                </div>
+            </div>
+            <div class="product_rows">
+                <div class="product__name_rows">Very long product name</div>
+                <div class="picture_rows"></div>
+                <div class="description_rows">Lorem ipsum dolor sit amet.</div>
+                <div class="price_buy">
+                <div class="price_rows">3000$</div>
+                <div class="buy_button">Buy</div>
+                </div>
+            </div>
+            <div class="product_rows">
+                <div class="product__name_rows">Very long product name</div>
+                <div class="picture_rows"></div>
+                <div class="description_rows">Lorem ipsum dolor sit amet.</div>
+                <div class="price_buy">
+                    <div class="price_rows">3000$</div>
+                    <div class="buy_button">Buy</div>
+                </div>
+            </div>
+            <div class="product_rows">
+                <div class="product__name_rows">Very long product name</div>
+                <div class="picture_rows"></div>
+                <div class="description_rows">Lorem ipsum dolor sit amet.</div>
+                <div class="price_buy">
+                <div class="price_rows">3000$</div>
+                <div class="buy_button">Buy</div>
+                </div>
+            </div>
+            <div id="last" class="product_rows">
+                <div class="product__name_rows">Very long product name</div>
+                <div class="picture_rows"></div>
+                <div class="description_rows">Lorem ipsum dolor sit amet.</div>
+                <div class="price_buy">
+                <div class="price_rows">3000$</div>
+                <div class="buy_button">Buy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
